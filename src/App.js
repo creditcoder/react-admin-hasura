@@ -14,19 +14,17 @@ import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
 
 // import customRoutes from "./routes";
-import englishMessages from "./i18n/en";
+import spanishMessages from "./i18n/es";
 
-// const uri = "https://low-code-api.herokuapp.com/v1/graphql";
-const uri = "https://fitness-service.herokuapp.com/v1/graphql";
+const uri = "https://low-code-api.herokuapp.com/v1/graphql";
 
 const i18nProvider = polyglotI18nProvider(locale => {
-  if (locale === "es") {
-    return import("./i18n/es").then(messages => messages.default);
+  if (locale === "en") {
+    return import("./i18n/en").then(messages => messages.default);
   }
 
-  // Always fallback on english
-  return englishMessages;
-}, "en");
+  return spanishMessages;
+}, "es");
 
 const headers = {
   "content-type": "application/json",
@@ -42,9 +40,9 @@ const App = async () => {
       dataProvider={hasuraDataProvider}
       customReducers={{ theme: themeReducer }}
       // customRoutes={customRoutes}
-      // authProvider={authProvider}
+      authProvider={authProvider}
       // dashboard={Dashboard}
-      // loginPage={Login}
+      loginPage={Login}
       // layout={Layout}
       i18nProvider={i18nProvider}
     >

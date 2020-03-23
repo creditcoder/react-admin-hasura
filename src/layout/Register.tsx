@@ -78,7 +78,7 @@ interface FormValues {
 
 const { Form } = withTypes<FormValues>();
 
-const Login = () => {
+const Register = () => {
   const [loading, setLoading] = useState(false);
   const translate = useTranslate();
   const classes = useStyles();
@@ -160,7 +160,7 @@ const Login = () => {
                     fullWidth
                   >
                     {loading && <CircularProgress size={25} thickness={2} />}
-                    {translate("resources.sign_in")}
+                    {translate("resources.sign_up")}
                   </Button>
                   <Button
                     // variant="contained"
@@ -170,7 +170,7 @@ const Login = () => {
                     fullWidth
                   >
                     {loading && <CircularProgress size={25} thickness={2} />}
-                    {translate("resources.sign_up")}
+                    {translate("resources.sign_in")}
                   </Button>
                 </CardActions>
               </Card>
@@ -183,7 +183,7 @@ const Login = () => {
   );
 };
 
-Login.propTypes = {
+Register.propTypes = {
   authProvider: PropTypes.func,
   previousRoute: PropTypes.string
 };
@@ -193,7 +193,7 @@ Login.propTypes = {
 // the right theme
 const LoginWithTheme = (props: any) => (
   <ThemeProvider theme={createMuiTheme(lightTheme)}>
-    <Login {...props} />
+    <Register {...props} />
   </ThemeProvider>
 );
 

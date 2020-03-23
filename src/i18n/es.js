@@ -55,7 +55,7 @@ export default {
         name: "Nom",
         total_spent: "Dépenses",
         zipcode: "Code postal",
-        password: "Mot de passe",
+        password: "Contraseña",
         confirm_password: "Confirmez le mot de passe"
       },
       fieldGroups: {
@@ -63,7 +63,7 @@ export default {
         address: "Adresse",
         stats: "Statistiques",
         history: "Historique",
-        password: "Mot de passe",
+        password: "Contraseña",
         change_password: "Changer le mot de passe"
       },
       page: {
@@ -185,6 +185,8 @@ export default {
         returns: "A renvoyé",
         reviewer: "Commentateur"
       }
-    }
+    },
+    sign_in: "INGRESA",
+    sign_up: "REGISTRO"
   }
 };
